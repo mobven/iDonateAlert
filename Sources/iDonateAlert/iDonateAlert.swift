@@ -57,7 +57,7 @@ public final class iDonateAlert {
         message: String,
         titleFont: UIFont? = nil
     ) {
-        self.icon = icon
+        self.icon = icon ?? UIImage(named: "heart", in: .module)
         self.title = title
         self.message = message
         self.titleFont = titleFont
@@ -69,7 +69,7 @@ public final class iDonateAlert {
         attributedTitle: NSAttributedString? = nil,
         attributedMessage: NSAttributedString? = nil
     ) {
-        self.icon = icon
+        self.icon = icon ?? UIImage(named: "heart", in: .module)
         self.attributedTitle = attributedTitle ?? defaultAttributedTitle()
         self.attributedMessage = attributedMessage ?? defaultAttributedMessage()
         self.buttons = [.ahbap, .afad, .kizilay]
