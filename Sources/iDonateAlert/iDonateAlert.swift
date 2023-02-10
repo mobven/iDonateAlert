@@ -21,11 +21,11 @@ public final class iDonateAlert {
         /// Button initializer
         /// - Parameters:
         ///   - title: Sets the text that appears on the button
-        ///   - image: If we want the image to appear on the button, we can set its assets
+        ///   - image: If we want the image to appear on the button, we can set its asset
         ///   - titleColor: To give color to the text that appears on the button
-        ///   - borderColor: t is used to give the border color to the button. Gets a value of type CGColor
+        ///   - borderColor: It is used to give the border color to the button. Gets a value of type CGColor
         ///   - backgroundColor: It is used to give a background color to the button
-        ///   - action: The action to be done when the button is pressed is defined in the clouser.
+        ///   - url: The Url to show on SafariViewController when the button is pressed.
         public init(
             title: String?,
             image: UIImage?,
@@ -42,10 +42,6 @@ public final class iDonateAlert {
             self.action = action
         }
 
-        public enum ActionType {
-            case `default`, destructive, custom
-        }
-
         public typealias AlertAction = (Button) -> Void
     }
 
@@ -59,12 +55,11 @@ public final class iDonateAlert {
     var attributedTitle: NSAttributedString?
     var attributedMessage: NSAttributedString?
     
-    /// <#Description#>
     /// - Parameters:
-    ///   - icon: The Icon that is desired to appear on the screen is defined. If no icon is entered initially, a custom icon will appear.
+    ///   - icon: The Icon that is desired to appear on the screen. If no icon is entered initially, a custom icon will appear.
     ///   - title: It is the title that appears on the homepage. It cannot be nil.
-    ///   - message: The message to be displayed on the screen is defined here
-    ///   - titleFont: To set the font. If it is nil, the custom value is set
+    ///   - message: The message to be displayed on the screen is defined here.
+    ///   - titleFont: To set the font. If it is nil, system font will be used.
     public init(
         icon: UIImage? = nil,
         title: String,
@@ -99,11 +94,16 @@ public final class iDonateAlert {
         buttons.removeAll()
     }
     
-    /// Adds button to screen
+    /// Adds button to the screen
     public func addAction(_ button: Button) {
         buttons.append(button)
     }
-
+    
+    /// Present IDonate alert.
+    /// - Parameters:
+    ///   - viewController: The controller present IDonate over.
+    ///   - animated: Pass true to animate the presentation; otherwise, pass false.
+    ///   - completion: The block to execute after the presentation finishes. This block has no return value and takes no parameters. You may specify nil for this parameter.
     public func present(over viewController: UIViewController, animated: Bool = true, completion: (() -> Void)? = nil) {
         guard let controller = UIStoryboard(name: "iDonateAlert", bundle: .module)
             .instantiateInitialViewController() as? AlertViewController else {

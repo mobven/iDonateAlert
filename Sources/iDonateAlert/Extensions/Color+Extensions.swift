@@ -14,7 +14,7 @@ public extension UIColor {
     static var ahbapButtonBackgroundColor: UIColor { UIColor(colorName: "ahbapButtonBackgroundColor") }
     static var baseDonateTextColor: UIColor { UIColor(colorName: "baseDonateTextColor") }
     static var baseTextColor: UIColor { UIColor(colorName: "baseTextColor") }
-    static var bsaeBackgroundColor: UIColor { UIColor(colorName: "bsaeBackgroundColor") }
+    static var baseBackgroundColor: UIColor { UIColor(colorName: "baseBackgroundColor") }
     static var individualButonBorderColor: UIColor { UIColor(colorName: "individualButonBorderColor") }
     static var kızılayBackgroundColor: UIColor { UIColor(colorName: "kızılayBackgroundColor") }
     static var kızılayRed: UIColor { UIColor(colorName: "kızılayRed") }
