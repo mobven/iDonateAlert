@@ -17,7 +17,15 @@ public final class iDonateAlert {
         var action: AlertAction?
         var borderColor: UIColor?
         var backgroundColor: UIColor?
-
+        
+        /// Button initializer
+        /// - Parameters:
+        ///   - title: Sets the text that appears on the button
+        ///   - image: If we want the image to appear on the button, we can set its assets
+        ///   - titleColor: To give color to the text that appears on the button
+        ///   - borderColor: t is used to give the border color to the button. Gets a value of type CGColor
+        ///   - backgroundColor: It is used to give a background color to the button
+        ///   - action: The action to be done when the button is pressed is defined in the clouser.
         public init(
             title: String?,
             image: UIImage?,
@@ -50,7 +58,13 @@ public final class iDonateAlert {
     var buttons: [Button] = []
     var attributedTitle: NSAttributedString?
     var attributedMessage: NSAttributedString?
-
+    
+    /// <#Description#>
+    /// - Parameters:
+    ///   - icon: The Icon that is desired to appear on the screen is defined. If no icon is entered initially, a custom icon will appear.
+    ///   - title: It is the title that appears on the homepage. It cannot be nil.
+    ///   - message: The message to be displayed on the screen is defined here
+    ///   - titleFont: To set the font. If it is nil, the custom value is set
     public init(
         icon: UIImage? = nil,
         title: String,
@@ -64,6 +78,11 @@ public final class iDonateAlert {
         self.buttons = [.ahbap, .afad, .kizilay]
     }
     
+    /// With this initializer, only icon and text can be inited
+    /// - Parameters:
+    ///   - icon: The Icon that is desired to appear on the screen is defined. If no icon is entered initially, a custom icon will appear.
+    ///   - attributedTitle: to add attribution to the title that appears on the screen
+    ///   - attributedMessage: to add attributes to the message that appears on the screen
     public init(
         icon: UIImage? = nil,
         attributedTitle: NSAttributedString? = nil,
@@ -75,10 +94,12 @@ public final class iDonateAlert {
         self.buttons = [.ahbap, .afad, .kizilay]
     }
     
+    ///Deletes all buttons on the screen
     public func removeAllActions() {
         buttons.removeAll()
     }
-
+    
+    /// Adds button to screen
     public func addAction(_ button: Button) {
         buttons.append(button)
     }
