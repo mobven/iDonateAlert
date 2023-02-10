@@ -79,21 +79,14 @@ final class AlertViewController: UIViewController {
             )))
             button.layer.cornerRadius = buttonCornerRadius
             button.setTitle(alertButton.title, for: .normal)
-//            button.titleLabel?.font = UIFont.getFont(family: .bold, size: 15)
             button.tag = index
             button.addTarget(self, action: #selector(selectButton(_:)), for: .touchUpInside)
-//            button.snp.makeConstraints { $0.height.equalTo(buttonHeight) }
-            if alertButton.type == .default {
-                button.backgroundColor = .clear
-                button.setTitleColor(alertButton.defaultTitleColor, for: .normal)
-            } else if alertButton.type == .custom {
-                button.backgroundColor = alertButton.backgroundColor
-//                button.setBorder(width: 1, color: alertButton.borderColor ?? .clear)
-                button.setTitleColor(alertButton.defaultTitleColor, for: .normal)
-            } else {
-                button.backgroundColor = .primary
-                button.setTitleColor(.primary, for: .normal)
-            }
+            button.layer.borderWidth = 2
+            button.layer.cornerRadius = 8
+            button.layer.borderColor = alertButton.borderColor?.cgColor
+            button.layer.backgroundColor = alertButton.backgroundColor?.cgColor
+            button.setTitleColor(alertButton.defaultTitleColor, for: .normal)
+            button.setImage(alertButton.image, for: .normal)
             buttonsStackView.addArrangedSubview(button)
         }
     }

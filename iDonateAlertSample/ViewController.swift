@@ -17,8 +17,6 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        let alert = iDonateAlert(title: "Test", message: "Test")
-        alert.present(over: self)
     }
 
 }

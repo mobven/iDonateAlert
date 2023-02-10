@@ -100,8 +100,8 @@ final class AlertSelectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         alertTitleLabel.text = alertTitle
-        contentView.backgroundColor = .primary
-        alertTitleLabel.textColor = .primary
+        contentView.backgroundColor = .baseDonateTextColor
+        alertTitleLabel.textColor = .baseDonateTextColor
         setOptions()
         animatePresentation()
         setButtons()
@@ -123,7 +123,7 @@ final class AlertSelectionViewController: UIViewController {
         optionsStackView.spacing = optionsSpacing
         for (index, alertOption) in alertOptions.enumerated() {
             let button = UIButton()
-            button.setTitleColor(UIColor.primary, for: .normal)
+            button.setTitleColor(UIColor.baseDonateTextColor, for: .normal)
             button.contentHorizontalAlignment = .leading
 
             button.setTitle(alertOption.title, for: .normal)
@@ -176,14 +176,14 @@ final class AlertSelectionViewController: UIViewController {
 
             switch alertButton.type {
             case .destructive:
-                button.backgroundColor = UIColor.primary
-                button.setTitleColor(.primary, for: .normal)
+                button.backgroundColor = UIColor.baseDonateTextColor
+                button.setTitleColor(.baseDonateTextColor, for: .normal)
             case .unColor:
-                button.backgroundColor = .primary
-                button.setTitleColor(.primary, for: .normal)
+                button.backgroundColor = .baseDonateTextColor
+                button.setTitleColor(.baseDonateTextColor, for: .normal)
             default:
-                button.backgroundColor = .primary
-                button.setTitleColor(UIColor.primary, for: .normal)
+                button.backgroundColor = .baseDonateTextColor
+                button.setTitleColor(UIColor.baseDonateTextColor, for: .normal)
             }
 
             buttonsStackView.addArrangedSubview(button)

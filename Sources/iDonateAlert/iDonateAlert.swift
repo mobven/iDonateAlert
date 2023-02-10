@@ -11,23 +11,23 @@ import UIKit
 public final class iDonateAlert {
     // swiftlint:disable nesting
     public struct Button {
-        var title: String
-        var type: Button.ActionType
+        var title: String?
+        var image: UIImage?
         var defaultTitleColor: UIColor?
         var action: AlertAction?
         var borderColor: UIColor?
         var backgroundColor: UIColor?
 
         public init(
-            title: String,
-            type: Button.ActionType,
-            titleColor: UIColor? = .primary,
+            title: String?,
+            image: UIImage?,
+            titleColor: UIColor? = .baseDonateTextColor,
             borderColor: UIColor? = .clear,
             backgroundColor: UIColor? = .clear,
             action: AlertAction? = nil
         ) {
             self.title = title
-            self.type = type
+            self.image = image
             defaultTitleColor = titleColor
             self.borderColor = borderColor
             self.backgroundColor = backgroundColor
@@ -107,3 +107,16 @@ public final class iDonateAlert {
     }
 }
 
+public extension iDonateAlert.Button {
+    static var ahbap: Self {
+        .init(title: nil, image: UIImage(named: "ahbap", in: .module))
+    }
+    
+    static var afad: Self {
+        .init(title: nil, image: UIImage(named: "afad", in: .module))
+    }
+    
+    static var kizilay: Self {
+        .init(title: nil, image: UIImage(named: "turkkizilayi", in: .module))
+    }
+}
