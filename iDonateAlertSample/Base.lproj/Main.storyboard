@@ -17,19 +17,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZj-MH-EJV">
-                                <rect key="frame" x="116.5" y="430.5" width="181.5" height="35"/>
+                                <rect key="frame" x="116" y="380.5" width="182" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Present iDonateAlert"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Present Default Alert"/>
                                 <connections>
-                                    <action selector="presentAlert" destination="BYZ-38-t0r" eventType="touchUpInside" id="FWD-47-Hjl"/>
+                                    <action selector="presentDefault" destination="BYZ-38-t0r" eventType="touchUpInside" id="74G-fo-GPB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlV-5R-IYS">
+                                <rect key="frame" x="102.5" y="445.5" width="209.5" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Present Custom Buttons"/>
+                                <connections>
+                                    <action selector="presentCustomButtons" destination="BYZ-38-t0r" eventType="touchUpInside" id="WXb-pp-czS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MF1-2z-tyD">
+                                <rect key="frame" x="115" y="510.5" width="184" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Present Custom Title"/>
+                                <connections>
+                                    <action selector="presentCustomTitle" destination="BYZ-38-t0r" eventType="touchUpInside" id="5ML-1J-WUa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1I-QH-Kai">
+                                <rect key="frame" x="72" y="575.5" width="270" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Present Custom Attributed Tittle"/>
+                                <connections>
+                                    <action selector="presentCustomAttributedTitle" destination="BYZ-38-t0r" eventType="touchUpInside" id="huV-aH-PuE"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rZj-MH-EJV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DEv-kK-159"/>
+                            <constraint firstItem="MF1-2z-tyD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2CM-A2-CgX"/>
+                            <constraint firstItem="MlV-5R-IYS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3oS-BS-yAi"/>
+                            <constraint firstItem="MF1-2z-tyD" firstAttribute="top" secondItem="MlV-5R-IYS" secondAttribute="bottom" constant="30" id="78Z-dP-RJb"/>
+                            <constraint firstItem="rZj-MH-EJV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="DEv-kK-159"/>
+                            <constraint firstItem="MlV-5R-IYS" firstAttribute="top" secondItem="rZj-MH-EJV" secondAttribute="bottom" constant="30" id="NQ2-PC-l8O"/>
                             <constraint firstItem="rZj-MH-EJV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eLC-KL-eMo"/>
+                            <constraint firstItem="c1I-QH-Kai" firstAttribute="top" secondItem="MF1-2z-tyD" secondAttribute="bottom" constant="30" id="hVK-jX-8nO"/>
+                            <constraint firstItem="c1I-QH-Kai" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ntS-SZ-RQ6"/>
                         </constraints>
                     </view>
                 </viewController>
