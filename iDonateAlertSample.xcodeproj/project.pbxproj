@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1918C0BB2996AAA500074098 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918C0BA2996AAA500074098 /* AppDelegate.swift */; };
 		1918C0BD2996AAA500074098 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918C0BC2996AAA500074098 /* SceneDelegate.swift */; };
-		1918C0BF2996AAA500074098 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918C0BE2996AAA500074098 /* ViewController.swift */; };
+		1918C0BF2996AAA500074098 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1918C0BE2996AAA500074098 /* MainViewController.swift */; };
 		1918C0C22996AAA500074098 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1918C0C02996AAA500074098 /* Main.storyboard */; };
 		1918C0C42996AAA500074098 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1918C0C32996AAA500074098 /* Assets.xcassets */; };
 		1918C0C72996AAA500074098 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1918C0C52996AAA500074098 /* LaunchScreen.storyboard */; };
@@ -20,7 +20,7 @@
 		1918C0B72996AAA500074098 /* iDonateAlertSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iDonateAlertSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1918C0BA2996AAA500074098 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1918C0BC2996AAA500074098 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1918C0BE2996AAA500074098 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1918C0BE2996AAA500074098 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1918C0C12996AAA500074098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1918C0C32996AAA500074098 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1918C0C62996AAA500074098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -63,7 +63,7 @@
 			children = (
 				1918C0BA2996AAA500074098 /* AppDelegate.swift */,
 				1918C0BC2996AAA500074098 /* SceneDelegate.swift */,
-				1918C0BE2996AAA500074098 /* ViewController.swift */,
+				1918C0BE2996AAA500074098 /* MainViewController.swift */,
 				1918C0C02996AAA500074098 /* Main.storyboard */,
 				1918C0C32996AAA500074098 /* Assets.xcassets */,
 				1918C0C52996AAA500074098 /* LaunchScreen.storyboard */,
@@ -153,7 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1918C0BF2996AAA500074098 /* ViewController.swift in Sources */,
+				1918C0BF2996AAA500074098 /* MainViewController.swift in Sources */,
 				1918C0BB2996AAA500074098 /* AppDelegate.swift in Sources */,
 				1918C0BD2996AAA500074098 /* SceneDelegate.swift in Sources */,
 			);
@@ -302,7 +302,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RE9892F24F;
+				DEVELOPMENT_TEAM = A2X4D6G99N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iDonateAlertSample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -330,7 +330,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RE9892F24F;
+				DEVELOPMENT_TEAM = A2X4D6G99N;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iDonateAlertSample/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
