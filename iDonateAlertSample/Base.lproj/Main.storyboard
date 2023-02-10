@@ -20,6 +20,9 @@
                                 <rect key="frame" x="116.5" y="430.5" width="181.5" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Present iDonateAlert"/>
+                                <connections>
+                                    <action selector="presentAlert" destination="BYZ-38-t0r" eventType="touchUpInside" id="FWD-47-Hjl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

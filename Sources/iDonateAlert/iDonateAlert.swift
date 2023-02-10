@@ -84,7 +84,7 @@ public final class iDonateAlert {
     }
 
     public func present(over viewController: UIViewController, animated: Bool = true, completion: (() -> Void)? = nil) {
-        guard let controller = UIStoryboard(name: "Alert", bundle: .module)
+        guard let controller = UIStoryboard(name: "iDonateAlert", bundle: .module)
             .instantiateInitialViewController() as? AlertViewController else {
             fatalError("AlertViewController could not be initialized")
         }

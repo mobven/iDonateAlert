@@ -19,7 +19,8 @@ let package = Package(
             name: "iDonateAlert",
             dependencies: [],
             resources: [
-                .copy("../../Resources/ahbap.pdf")
+                .copy("../../Resources/ahbap.pdf"),
+                .copy("../../Resources/Colors/Colors.xcassets")
             ]
         ),
         .testTarget(
