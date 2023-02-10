@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "iDonateAlert",
+    defaultLocalization: "tr",
     platforms: [.iOS(.v11)],
     products: [
         .library(
