@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 
 final class AlertViewController: UIViewController {
@@ -51,7 +52,11 @@ final class AlertViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
-
+    
+    @IBAction func dismiss(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
     private func setButtons() {
         for (index, alertButton) in alertButtons.enumerated() {
             let button = UIButton(frame: .init(origin: .zero, size: .init(
@@ -73,9 +78,15 @@ final class AlertViewController: UIViewController {
     }
 
     @objc private func selectButton(_ button: UIButton) {
-        dismiss(animated: true) { [weak self] in
-            guard let self else { return }
-            self.alertButtons[button.tag].action?(self.alertButtons[button.tag])
-        }
+        let config = SFSafariViewController.Configuration()
+        let safariViewController = SFSafariViewController(url: alertButtons[button.tag].url, configuration: config)
+        safariViewController.modalPresentationStyle = .fullScreen
+        present(safariViewController, animated: true)
+        
+//        dismiss(animated: true) { [weak self] in
+//            guard let self else { return }
+//            self.alertButtons[button.tag].action?(self.alertButtons[button.tag])
+//        }
+        
     }
 }

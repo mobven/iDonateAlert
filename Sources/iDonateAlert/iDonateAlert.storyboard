@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -56,18 +56,31 @@ Sadece birkaç dokunuşla afet yardımı çabalarına bağışta bulunabilir ve 
                                                     <constraint firstAttribute="height" constant="300" placeholder="YES" id="gwP-a5-Wit"/>
                                                 </constraints>
                                             </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdG-RZ-AOK">
+                                                <rect key="frame" x="289" y="22" width="98" height="38"/>
+                                                <color key="tintColor" name="baseTextColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="closeButton" imagePlacement="trailing" title="Kapat  ">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="dismiss:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="TkM-Nm-7bD"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" name="bsaeBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="gLw-qP-hUR" firstAttribute="top" secondItem="ahG-ok-naf" secondAttribute="bottom" constant="26" id="0E8-qj-CbQ"/>
                                             <constraint firstAttribute="bottom" secondItem="jm0-Qs-hFD" secondAttribute="bottom" id="GHr-18-YJW"/>
                                             <constraint firstItem="1bg-PL-jw9" firstAttribute="top" secondItem="epd-3g-GmQ" secondAttribute="top" constant="30" id="JSF-mv-lOy"/>
+                                            <constraint firstAttribute="trailing" secondItem="KdG-RZ-AOK" secondAttribute="trailing" constant="27" id="PGg-Og-nzJ"/>
                                             <constraint firstItem="jm0-Qs-hFD" firstAttribute="top" secondItem="gLw-qP-hUR" secondAttribute="bottom" constant="22" id="PH9-rq-0gW"/>
                                             <constraint firstAttribute="trailing" secondItem="jm0-Qs-hFD" secondAttribute="trailing" constant="22" id="WkA-qp-11v"/>
                                             <constraint firstItem="jm0-Qs-hFD" firstAttribute="leading" secondItem="epd-3g-GmQ" secondAttribute="leading" constant="22" id="YPd-Ub-DQx"/>
                                             <constraint firstItem="ahG-ok-naf" firstAttribute="top" secondItem="1bg-PL-jw9" secondAttribute="bottom" constant="40" id="a9w-Zg-yri"/>
                                             <constraint firstAttribute="trailing" secondItem="gLw-qP-hUR" secondAttribute="trailing" constant="32" id="fdW-c2-51I"/>
                                             <constraint firstAttribute="trailing" secondItem="ahG-ok-naf" secondAttribute="trailing" constant="32" id="fqu-1W-HTW"/>
+                                            <constraint firstItem="KdG-RZ-AOK" firstAttribute="top" secondItem="epd-3g-GmQ" secondAttribute="top" constant="22" id="rbQ-LZ-ZRX"/>
                                             <constraint firstItem="ahG-ok-naf" firstAttribute="leading" secondItem="epd-3g-GmQ" secondAttribute="leading" constant="32" id="w0e-ZZ-wB3"/>
                                             <constraint firstItem="gLw-qP-hUR" firstAttribute="leading" secondItem="epd-3g-GmQ" secondAttribute="leading" constant="32" id="xQT-q8-eSo"/>
                                             <constraint firstItem="1bg-PL-jw9" firstAttribute="centerX" secondItem="epd-3g-GmQ" secondAttribute="centerX" id="zcS-Yu-eoV"/>
@@ -110,6 +123,7 @@ Sadece birkaç dokunuşla afet yardımı çabalarına bağışta bulunabilir ve 
         </scene>
     </scenes>
     <resources>
+        <image name="closeButton" width="24.5" height="24"/>
         <namedColor name="baseTextColor">
             <color red="0.14509803921568629" green="0.20000000000000001" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

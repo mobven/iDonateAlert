@@ -14,7 +14,7 @@ public final class iDonateAlert {
         var title: String?
         var image: UIImage?
         var defaultTitleColor: UIColor?
-        var action: AlertAction?
+        var url: URL
         var borderColor: UIColor?
         var backgroundColor: UIColor?
         
@@ -32,17 +32,15 @@ public final class iDonateAlert {
             titleColor: UIColor? = .baseDonateTextColor,
             borderColor: UIColor? = .clear,
             backgroundColor: UIColor? = .clear,
-            action: AlertAction? = nil
+            url: URL
         ) {
             self.title = title
             self.image = image
             defaultTitleColor = titleColor
             self.borderColor = borderColor
             self.backgroundColor = backgroundColor
-            self.action = action
+            self.url = url
         }
-
-        public typealias AlertAction = (Button) -> Void
     }
 
     // swiftlint:enable nesting
@@ -163,14 +161,14 @@ public final class iDonateAlert {
 
 public extension iDonateAlert.Button {
     static var ahbap: Self {
-        .init(title: nil, image: UIImage(named: "ahbap", in: .module), borderColor: .ahbapButtonBackgroundColor)
+        .init(title: nil, image: UIImage(named: "ahbap", in: .module), borderColor: .ahbapButtonBackgroundColor, url: URL(string: "https://ahbap.org/bagisci-ol")!)
     }
     
     static var afad: Self {
-        .init(title: nil, image: UIImage(named: "afad", in: .module), borderColor: .afadButtonBackgroundColor)
+        .init(title: nil, image: UIImage(named: "afad", in: .module), borderColor: .afadButtonBackgroundColor, url: URL(string: "https://www.afad.gov.tr/depremkampanyasi2")!)
     }
     
     static var kizilay: Self {
-        .init(title: nil, image: UIImage(named: "turkkizilayi", in: .module), borderColor: .kızılayBackgroundColor)
+        .init(title: nil, image: UIImage(named: "turkkizilayi", in: .module), borderColor: .kızılayBackgroundColor, url: URL(string: "https://www.kizilay.org.tr/bagis")!)
     }
 }

@@ -22,7 +22,7 @@ class MainViewController: UIViewController {
     @IBAction func presentCustomButtons() {
         let alert = iDonateAlert()
         alert.removeAllActions()
-        alert.addAction(.init(title: "INDIVIDUAL DONATION", image: nil))
+        alert.addAction(.init(title: "INDIVIDUAL DONATION", image: nil, url: URL(string: "https://www.google.com")!))
         alert.present(over: self)
     }
     
