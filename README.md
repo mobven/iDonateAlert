@@ -50,6 +50,6 @@ By default it has, AHBAP, AFAD and Turk Kizilayi buttons. If you want to add cus
 let alert = iDonateAlert()
 alert.removeAllActions()
 // TODO: add URLS
-alert.addAction(.init(title: "BİREYSEL BAĞIŞ", image: nil))
+alert.addAction(.init(title: "INDIVIDUAL DONATION", image: nil))
 alert.present(over: self)
 ```
