@@ -69,8 +69,8 @@ public final class iDonateAlert {
         attributedMessage: NSAttributedString? = nil
     ) {
         self.icon = icon
-        self.attributedTitle = attributedTitle
-        self.attributedMessage = attributedMessage
+        self.attributedTitle = attributedTitle ?? defaultAttributedTitle()
+        self.attributedMessage = attributedMessage ?? defaultAttributedMessage()
     }
 
     public func addAction(_ button: Button) {
@@ -93,4 +93,17 @@ public final class iDonateAlert {
         controller.modalTransitionStyle = .crossDissolve
         viewController.present(controller, animated: animated, completion: completion)
     }
+    
+    private func defaultAttributedTitle() -> NSAttributedString {
+        let title = NSMutableAttributedString()
+        // TODO: prepare
+        return title
+    }
+    
+    private func defaultAttributedMessage() -> NSAttributedString {
+        let message = NSMutableAttributedString()
+        // TODO: prepare
+        return message
+    }
 }
+
