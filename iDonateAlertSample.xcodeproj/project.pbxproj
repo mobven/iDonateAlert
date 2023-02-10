@@ -25,7 +25,7 @@
 		1918C0C32996AAA500074098 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1918C0C62996AAA500074098 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1918C0C82996AAA500074098 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1918C0CF2996AAD700074098 /* iDonateAlert */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = iDonateAlert; sourceTree = "<group>"; };
+		1918C0CF2996AAD700074098 /*  */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ""; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +43,7 @@
 		1918C0AE2996AAA500074098 = {
 			isa = PBXGroup;
 			children = (
-				1918C0CF2996AAD700074098 /* iDonateAlert */,
+				1918C0CF2996AAD700074098 /*  */,
 				1918C0B92996AAA500074098 /* iDonateAlertSample */,
 				1918C0B82996AAA500074098 /* Products */,
 				1918C0D02996ABA400074098 /* Frameworks */,
