@@ -4,7 +4,8 @@ iDonateAlert iOS SDK to show donation alerts easily in your app.
 
 ## Examples
 <p align="center">
-  <img alt="UI" src="Docs/screenshot.png">
+  <img alt="UI" src="Docs/screenshot_dark.png">
+  <img alt="UI" src="Docs/screenshot_light.png">
 </p>
 
 
