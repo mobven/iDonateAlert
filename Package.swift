@@ -16,7 +16,11 @@ let package = Package(
     targets: [
         .target(
             name: "iDonateAlert",
-            dependencies: []),
+            dependencies: [],
+            resources: [
+                .copy("Resources/ahbap.pdf")
+            ]
+        ),
         .testTarget(
             name: "iDonateAlertTests",
             dependencies: ["iDonateAlert"])
