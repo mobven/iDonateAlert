@@ -70,10 +70,11 @@ final class AlertViewController: UIViewController {
             button.layer.borderWidth = 2
             button.layer.cornerRadius = 8
             button.layer.borderColor = alertButton.borderColor?.cgColor
-            button.layer.backgroundColor = alertButton.backgroundColor?.cgColor
+            button.backgroundColor = alertButton.backgroundColor
             button.setTitleColor(alertButton.defaultTitleColor, for: .normal)
             button.setImage(alertButton.image, for: .normal)
             buttonsStackView.addArrangedSubview(button)
+            NSLayoutConstraint.activate([button.heightAnchor.constraint(equalToConstant: 52)])
         }
     }
 

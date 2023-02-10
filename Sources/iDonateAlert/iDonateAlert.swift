@@ -161,14 +161,14 @@ public final class iDonateAlert {
 
 public extension iDonateAlert.Button {
     static var ahbap: Self {
-        .init(title: nil, image: UIImage(named: "ahbap", in: .module), borderColor: .ahbapButtonBackgroundColor, url: URL(string: "https://ahbap.org/bagisci-ol")!)
+        .init(title: nil, image: UIImage(named: "ahbap", in: .module), borderColor: .ahbapGreen, backgroundColor: .ahbapButtonBackgroundColor, url: URL(string: "https://ahbap.org/bagisci-ol")!)
     }
     
     static var afad: Self {
-        .init(title: nil, image: UIImage(named: "afad", in: .module), borderColor: .afadButtonBackgroundColor, url: URL(string: "https://www.afad.gov.tr/depremkampanyasi2")!)
+        .init(title: nil, image: UIImage(named: "afad", in: .module), borderColor: .afadBlue, backgroundColor: .afadButtonBackgroundColor, url: URL(string: "https://www.afad.gov.tr/depremkampanyasi2")!)
     }
     
     static var kizilay: Self {
-        .init(title: nil, image: UIImage(named: "turkkizilayi", in: .module), borderColor: .kızılayBackgroundColor, url: URL(string: "https://www.kizilay.org.tr/bagis")!)
+        .init(title: nil, image: UIImage(named: "turkkizilayi", in: .module), borderColor: .kızılayRed, backgroundColor: .kızılayBackgroundColor, url: URL(string: "https://www.kizilay.org.tr/bagis")!)
     }
 }

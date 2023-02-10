@@ -11,6 +11,7 @@ import UIKit
 public extension UIColor {
     static var afadBlue: UIColor { UIColor(colorName: "afadBlue") }
     static var afadButtonBackgroundColor: UIColor { UIColor(colorName: "afadButtonBackgroundColor") }
+    static var ahbapGreen: UIColor { UIColor(colorName: "ahbapGreen") }
     static var ahbapButtonBackgroundColor: UIColor { UIColor(colorName: "ahbapButtonBackgroundColor") }
     static var baseDonateTextColor: UIColor { UIColor(colorName: "baseDonateTextColor") }
     static var baseTextColor: UIColor { UIColor(colorName: "baseTextColor") }

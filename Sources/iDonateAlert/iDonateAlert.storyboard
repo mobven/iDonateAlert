@@ -26,23 +26,22 @@
                                 <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="epd-3g-GmQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="638"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="676"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1bg-PL-jw9" userLabel="alertIconImage">
-                                                <rect key="frame" x="159" y="30" width="96" height="96"/>
+                                                <rect key="frame" x="0.0" y="68" width="414" height="96"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="96" id="B3e-1t-8g0"/>
                                                     <constraint firstAttribute="height" constant="96" id="L9L-k1-zf9"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Her Bağışla Fark Yaratın" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahG-ok-naf" userLabel="alertTitleLabel">
-                                                <rect key="frame" x="32" y="166" width="350" height="30.5"/>
+                                                <rect key="frame" x="32" y="204" width="350" height="30.5"/>
                                                 <fontDescription key="fontDescription" name="Cabin-Bold" family="Cabin" pointSize="26"/>
                                                 <color key="textColor" name="baseTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLw-qP-hUR" userLabel="alertMessageLabel">
-                                                <rect key="frame" x="32" y="222.5" width="350" height="93.5"/>
+                                                <rect key="frame" x="32" y="260.5" width="350" height="93.5"/>
                                                 <string key="text">Uygulamamız, 6 Şubat 2023 tarihinde yaşanan ve 11 ilde etkisini hissettiren depremden  etkilenenlerin hayatlarında bir fark yaratmanızı diliyor. 
 Sadece birkaç dokunuşla afet yardımı çabalarına bağışta bulunabilir ve ihtiyacı olanlara
  yardım sağlayabilirsiniz. </string>
@@ -50,8 +49,8 @@ Sadece birkaç dokunuşla afet yardımı çabalarına bağışta bulunabilir ve 
                                                 <color key="textColor" name="baseTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jm0-Qs-hFD">
-                                                <rect key="frame" x="22" y="338" width="370" height="300"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="jm0-Qs-hFD">
+                                                <rect key="frame" x="22" y="376" width="370" height="300"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="300" placeholder="YES" id="gwP-a5-Wit"/>
                                                 </constraints>
@@ -68,11 +67,13 @@ Sadece birkaç dokunuşla afet yardımı çabalarına bağışta bulunabilir ve 
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" name="bsaeBackgroundColor"/>
+                                        <color key="backgroundColor" name="baseBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="gLw-qP-hUR" firstAttribute="top" secondItem="ahG-ok-naf" secondAttribute="bottom" constant="26" id="0E8-qj-CbQ"/>
                                             <constraint firstAttribute="bottom" secondItem="jm0-Qs-hFD" secondAttribute="bottom" id="GHr-18-YJW"/>
-                                            <constraint firstItem="1bg-PL-jw9" firstAttribute="top" secondItem="epd-3g-GmQ" secondAttribute="top" constant="30" id="JSF-mv-lOy"/>
+                                            <constraint firstAttribute="trailing" secondItem="1bg-PL-jw9" secondAttribute="trailing" id="Io6-b3-Ljd"/>
+                                            <constraint firstItem="1bg-PL-jw9" firstAttribute="top" secondItem="KdG-RZ-AOK" secondAttribute="bottom" constant="8" id="JSF-mv-lOy"/>
+                                            <constraint firstItem="1bg-PL-jw9" firstAttribute="leading" secondItem="epd-3g-GmQ" secondAttribute="leading" id="Lbd-h2-gpz"/>
                                             <constraint firstAttribute="trailing" secondItem="KdG-RZ-AOK" secondAttribute="trailing" constant="27" id="PGg-Og-nzJ"/>
                                             <constraint firstItem="jm0-Qs-hFD" firstAttribute="top" secondItem="gLw-qP-hUR" secondAttribute="bottom" constant="22" id="PH9-rq-0gW"/>
                                             <constraint firstAttribute="trailing" secondItem="jm0-Qs-hFD" secondAttribute="trailing" constant="22" id="WkA-qp-11v"/>
@@ -99,7 +100,7 @@ Sadece birkaç dokunuşla afet yardımı çabalarına bağışta bulunabilir ve 
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
-                        <color key="backgroundColor" name="bsaeBackgroundColor"/>
+                        <color key="backgroundColor" name="baseBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="SyF-IW-hDp" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Myz-8M-sZf"/>
                             <constraint firstItem="SyF-IW-hDp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="c0A-cQ-yK1"/>
@@ -124,11 +125,11 @@ Sadece birkaç dokunuşla afet yardımı çabalarına bağışta bulunabilir ve 
     </scenes>
     <resources>
         <image name="closeButton" width="24.5" height="24"/>
+        <namedColor name="baseBackgroundColor">
+            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="baseTextColor">
             <color red="0.14509803921568629" green="0.20000000000000001" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="bsaeBackgroundColor">
-            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
