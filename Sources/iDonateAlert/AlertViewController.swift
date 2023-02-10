@@ -82,11 +82,5 @@ final class AlertViewController: UIViewController {
         let safariViewController = SFSafariViewController(url: alertButtons[button.tag].url, configuration: config)
         safariViewController.modalPresentationStyle = .fullScreen
         present(safariViewController, animated: true)
-        
-//        dismiss(animated: true) { [weak self] in
-//            guard let self else { return }
-//            self.alertButtons[button.tag].action?(self.alertButtons[button.tag])
-//        }
-        
     }
 }
