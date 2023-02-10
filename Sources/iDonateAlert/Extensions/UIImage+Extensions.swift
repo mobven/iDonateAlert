@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 extension UIImage {
-    
     convenience init?(named: String, in bundle: Bundle = .module) {
         if #available(iOS 13.0, *) {
             self.init(named: named, in: bundle, compatibleWith: .current)

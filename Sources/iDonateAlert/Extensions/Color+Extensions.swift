@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 public extension UIColor {
-    
     static var afadBlue: UIColor { UIColor(colorName: "afadBlue") }
     static var afadButtonBackgroundColor: UIColor { UIColor(colorName: "afadButtonBackgroundColor") }
     static var ahbapButtonBackgroundColor: UIColor { UIColor(colorName: "ahbapButtonBackgroundColor") }

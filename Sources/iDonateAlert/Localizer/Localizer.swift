@@ -14,7 +14,7 @@ final class Localizer {
     static let current = Localizer()
 
     /// Selected language code
-    public var languageCode: String {
+    var languageCode: String {
         if #available(iOS 13.0, *) {
             return String(Bundle.main.preferredLocalizations.first?.prefix(2) ?? "")
         } else {
@@ -22,7 +22,7 @@ final class Localizer {
         }
     }
 
-    public var locale: Locale {
+    var locale: Locale {
         if #available(iOS 13.0, *) {
             return Locale.current
         } else {
@@ -37,7 +37,7 @@ final class Localizer {
         return defaultLanguage()
     }
 
-    public func setLocale(_ locale: Locale) {
+    func setLocale(_ locale: Locale) {
         let languageCode = locale.code()
         let selectedLanguage = availableLanguages().contains(languageCode) ? languageCode : defaultLanguage()
         if selectedLanguage != getLanguage() {
@@ -71,7 +71,7 @@ final class Localizer {
 }
 
 /// Localization based string extension.
-public extension String {
+extension String {
     /// Returns localized text with the current locale.
     var localized: String {
         if #available(iOS 13.0, *) {
