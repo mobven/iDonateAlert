@@ -35,6 +35,9 @@ final class AlertViewController: UIViewController {
         alertIconHeightConstraint.constant = alertIcon == nil ? 0 : imageContainerHeight
         alertIconImage.image = alertIcon
         alertTitleLabel.text = alertTitle
+        if let attributedTitle {
+            alertTitleLabel.attributedText = attributedTitle
+        }
         if let font = titleFont {
             alertTitleLabel.font = font
         }
