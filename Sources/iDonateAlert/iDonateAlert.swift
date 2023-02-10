@@ -61,6 +61,7 @@ public final class iDonateAlert {
         self.title = title
         self.message = message
         self.titleFont = titleFont
+        self.buttons = [.ahbap, .afad, .kizilay]
     }
     
     public init(
@@ -71,6 +72,11 @@ public final class iDonateAlert {
         self.icon = icon
         self.attributedTitle = attributedTitle ?? defaultAttributedTitle()
         self.attributedMessage = attributedMessage ?? defaultAttributedMessage()
+        self.buttons = [.ahbap, .afad, .kizilay]
+    }
+    
+    public func removeAllActions() {
+        buttons.removeAll()
     }
 
     public func addAction(_ button: Button) {
