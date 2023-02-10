@@ -163,14 +163,14 @@ public final class iDonateAlert {
 
 public extension iDonateAlert.Button {
     static var ahbap: Self {
-        .init(title: nil, image: UIImage(named: "ahbap", in: .module))
+        .init(title: nil, image: UIImage(named: "ahbap", in: .module), borderColor: .ahbapButtonBackgroundColor)
     }
     
     static var afad: Self {
-        .init(title: nil, image: UIImage(named: "afad", in: .module))
+        .init(title: nil, image: UIImage(named: "afad", in: .module), borderColor: .afadButtonBackgroundColor)
     }
     
     static var kizilay: Self {
-        .init(title: nil, image: UIImage(named: "turkkizilayi", in: .module))
+        .init(title: nil, image: UIImage(named: "turkkizilayi", in: .module), borderColor: .kızılayBackgroundColor)
     }
 }
