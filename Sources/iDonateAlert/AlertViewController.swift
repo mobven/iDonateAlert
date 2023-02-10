@@ -10,7 +10,6 @@ import UIKit
 
 
 final class AlertViewController: UIViewController {
-    @IBOutlet private var contentHeightConstraint: NSLayoutConstraint!
     @IBOutlet private var contentView: UIView!
     @IBOutlet private var scrollView: UIScrollView!
     @IBOutlet private var alertIconHeightConstraint: NSLayoutConstraint!
@@ -36,6 +35,9 @@ final class AlertViewController: UIViewController {
         alertIconHeightConstraint.constant = alertIcon == nil ? 0 : imageContainerHeight
         alertIconImage.image = alertIcon
         alertTitleLabel.text = alertTitle
+        if let attributedTitle {
+            alertTitleLabel.attributedText = attributedTitle
+        }
         if let font = titleFont {
             alertTitleLabel.font = font
         }
@@ -44,31 +46,10 @@ final class AlertViewController: UIViewController {
             alertMessageLabel.attributedText = attributedMessage
         }
         setButtons()
-        contentView.alpha = 0
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) { [weak self] in
-            self?.setContentHeight()
-        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-    }
-
-    func setContentHeight() {
-        UIView.animate(withDuration: 0.25) { [weak self] in
-            guard let self else { return }
-            self.contentView.alpha = 1.0
-            let maxContentHeight = UIScreen.main.bounds.height - 50
-            if self.scrollView.contentSize.height > maxContentHeight {
-                self.contentHeightConstraint.constant = maxContentHeight
-            } else {
-                self.contentHeightConstraint.constant = self.scrollView.contentSize.height
-            }
-            if self.contentHeightConstraint.constant == 0 {
-                print("contentHeightConstraint value found zero. Dismissing AlertViewController")
-                self.dismiss(animated: false, completion: nil)
-            }
-        }
     }
 
     private func setButtons() {

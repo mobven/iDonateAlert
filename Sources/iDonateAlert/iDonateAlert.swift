@@ -71,7 +71,7 @@ public final class iDonateAlert {
         message: String,
         titleFont: UIFont? = nil
     ) {
-        self.icon = icon
+        self.icon = icon ?? UIImage(named: "heart", in: .module)
         self.title = title
         self.message = message
         self.titleFont = titleFont
@@ -88,7 +88,7 @@ public final class iDonateAlert {
         attributedTitle: NSAttributedString? = nil,
         attributedMessage: NSAttributedString? = nil
     ) {
-        self.icon = icon
+        self.icon = icon ?? UIImage(named: "heart", in: .module)
         self.attributedTitle = attributedTitle ?? defaultAttributedTitle()
         self.attributedMessage = attributedMessage ?? defaultAttributedMessage()
         self.buttons = [.ahbap, .afad, .kizilay]
@@ -105,7 +105,7 @@ public final class iDonateAlert {
     }
 
     public func present(over viewController: UIViewController, animated: Bool = true, completion: (() -> Void)? = nil) {
-        guard let controller = UIStoryboard(name: "Alert", bundle: .module)
+        guard let controller = UIStoryboard(name: "iDonateAlert", bundle: .module)
             .instantiateInitialViewController() as? AlertViewController else {
             fatalError("AlertViewController could not be initialized")
         }
@@ -122,15 +122,42 @@ public final class iDonateAlert {
     }
     
     private func defaultAttributedTitle() -> NSAttributedString {
-        let title = NSMutableAttributedString()
-        // TODO: prepare
-        return title
+        let defaultMessage = "alert_default_title".localized
+        let mutableAttributedString = NSMutableAttributedString(string: defaultMessage)
+        let range = (defaultMessage as NSString).range(of: "change_color_title".localized)
+
+        mutableAttributedString.addAttributes(
+            [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 24)],
+            range: NSRange(location: 0, length: mutableAttributedString.string.count)
+        )
+        
+        mutableAttributedString.addAttributes(
+            [
+                NSAttributedString.Key.foregroundColor: UIColor.baseDonateTextColor,
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 24, weight: .bold)
+            ],
+            range: range
+        )
+
+        return mutableAttributedString
     }
     
     private func defaultAttributedMessage() -> NSAttributedString {
-        let message = NSMutableAttributedString()
-        // TODO: prepare
-        return message
+        let defaultMessage = "alert_default_mesaage".localized
+        let mutableAttributedString = NSMutableAttributedString(
+            string: defaultMessage, attributes: [
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)
+            ]
+        )
+        let range = (defaultMessage as NSString).range(of: "default_message_bold".localized)
+
+        mutableAttributedString.addAttribute(
+            NSAttributedString.Key.font,
+            value: UIFont.systemFont(ofSize: 13, weight: .bold),
+            range: range
+        )
+
+        return mutableAttributedString
     }
 }
 

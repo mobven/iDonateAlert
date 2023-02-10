@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func presentAlert() {
-        let alert = iDonateAlert(title: "Test", message: "Test")
+        let alert = iDonateAlert()
         alert.present(over: self)
     }
 }
