@@ -44,27 +44,33 @@ public final class iDonateAlert {
     // swiftlint:enable nesting
 
     var icon: UIImage?
-    var title: String
-    var message: String
+    var title: String?
+    var message: String?
     var titleFont: UIFont?
     var buttons: [Button] = []
+    var attributedTitle: NSAttributedString?
     var attributedMessage: NSAttributedString?
-    var messageTapHandler: (() -> Void)?
 
     public init(
         icon: UIImage? = nil,
         title: String,
         message: String,
-        titleFont: UIFont? = nil,
-        attributedMessage: NSAttributedString? = nil,
-        messageTapHandler: (() -> Void)? = nil
+        titleFont: UIFont? = nil
     ) {
         self.icon = icon
         self.title = title
         self.message = message
         self.titleFont = titleFont
-        self.attributedMessage = attributedMessage
-        self.messageTapHandler = messageTapHandler
+    }
+    
+    public init(
+        icon: UIImage? = nil,
+        attributedTitle: NSAttributedString? = nil,
+        attributedMessage: NSAttributedString? = nil
+    ) {
+        self.icon = icon
+        self.attributedTitle = attributedTitle ?? defaultAttributedTitle()
+        self.attributedMessage = attributedMessage ?? defaultAttributedMessage()
     }
 
     public func addAction(_ button: Button) {
@@ -81,10 +87,23 @@ public final class iDonateAlert {
         controller.alertMessage = message
         controller.titleFont = titleFont
         controller.alertButtons = buttons
+        controller.attributedTitle = attributedTitle
         controller.attributedMessage = attributedMessage
-        controller.messageTapHandler = messageTapHandler
         controller.modalPresentationStyle = .overFullScreen
         controller.modalTransitionStyle = .crossDissolve
         viewController.present(controller, animated: animated, completion: completion)
     }
+    
+    private func defaultAttributedTitle() -> NSAttributedString {
+        let title = NSMutableAttributedString()
+        // TODO: prepare
+        return title
+    }
+    
+    private func defaultAttributedMessage() -> NSAttributedString {
+        let message = NSMutableAttributedString()
+        // TODO: prepare
+        return message
+    }
 }
+

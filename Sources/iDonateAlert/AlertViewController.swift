@@ -24,7 +24,7 @@ final class AlertViewController: UIViewController {
     var titleFont: UIFont?
     var alertMessage: String!
     var alertButtons: [iDonateAlert.Button]!
-    var messageTapHandler: (() -> Void)?
+    var attributedTitle: NSAttributedString?
     var attributedMessage: NSAttributedString?
 
     @IBInspectable private var imageContainerHeight: CGFloat = 120
@@ -47,12 +47,6 @@ final class AlertViewController: UIViewController {
         contentView.alpha = 0
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) { [weak self] in
             self?.setContentHeight()
-        }
-        if messageTapHandler != nil {
-            alertMessageLabel.isUserInteractionEnabled = true
-            alertMessageLabel.addGestureRecognizer(
-                UITapGestureRecognizer(target: self, action: #selector(didTapMessage(_:)))
-            )
         }
     }
 
@@ -109,9 +103,5 @@ final class AlertViewController: UIViewController {
             guard let self else { return }
             self.alertButtons[button.tag].action?(self.alertButtons[button.tag])
         }
-    }
-
-    @objc func didTapMessage(_ recognizer: UITapGestureRecognizer) {
-        messageTapHandler?()
     }
 }

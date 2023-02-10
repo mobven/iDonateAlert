@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "iDonateAlert",
+    defaultLocalization: "tr",
     platforms: [.iOS(.v11)],
     products: [
         .library(
@@ -18,7 +19,7 @@ let package = Package(
             name: "iDonateAlert",
             dependencies: [],
             resources: [
-                .copy("Resources/ahbap.pdf")
+                .copy("../../Resources/ahbap.pdf")
             ]
         ),
         .testTarget(
