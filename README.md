@@ -1,6 +1,6 @@
 # iDonateAlert
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 iDonateAlert iOS SDK to show donation alerts easily in your app.
@@ -68,6 +68,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/NOTB4D"><img src="https://avatars.githubusercontent.com/u/75912206?v=4?s=100" width="100px;" alt="Eser Kucuker"/><br /><sub><b>Eser Kucuker</b></sub></a><br /><a href="#infra-NOTB4D" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/mobven/iDonateAlert/commits?author=NOTB4D" title="Tests">⚠️</a> <a href="https://github.com/mobven/iDonateAlert/commits?author=NOTB4D" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/MobvenSametOgutcuoglu"><img src="https://avatars.githubusercontent.com/u/108695720?v=4?s=100" width="100px;" alt="MobvenSametOgutcuoglu"/><br /><sub><b>MobvenSametOgutcuoglu</b></sub></a><br /><a href="https://github.com/mobven/iDonateAlert/commits?author=MobvenSametOgutcuoglu" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
