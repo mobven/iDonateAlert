@@ -57,30 +57,5 @@ alert.addAction(.init(title: "INDIVIDUAL DONATION", image: nil))
 alert.present(over: self)
 ```
 
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tbody>
-    <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/furkan-erucar/"><img src="https://avatars.githubusercontent.com/u/97690923?v=4?s=100" width="100px;" alt="Furkan Erucar"/><br /><sub><b>Furkan Erucar</b></sub></a><br /><a href="#infra-Pessevmeyen" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/mobven/iDonateAlert/commits?author=Pessevmeyen" title="Tests">⚠️</a> <a href="https://github.com/mobven/iDonateAlert/commits?author=Pessevmeyen" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/NOTB4D"><img src="https://avatars.githubusercontent.com/u/75912206?v=4?s=100" width="100px;" alt="Eser Kucuker"/><br /><sub><b>Eser Kucuker</b></sub></a><br /><a href="#infra-NOTB4D" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/mobven/iDonateAlert/commits?author=NOTB4D" title="Tests">⚠️</a> <a href="https://github.com/mobven/iDonateAlert/commits?author=NOTB4D" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/MobvenSametOgutcuoglu"><img src="https://avatars.githubusercontent.com/u/108695720?v=4?s=100" width="100px;" alt="MobvenSametOgutcuoglu"/><br /><sub><b>MobvenSametOgutcuoglu</b></sub></a><br /><a href="https://github.com/mobven/iDonateAlert/commits?author=MobvenSametOgutcuoglu" title="Code">💻</a></td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-
-
 ---
 Developed with 🖤 at [Mobven](https://mobven.com/)
