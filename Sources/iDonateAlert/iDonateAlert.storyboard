@@ -22,6 +22,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rightCornerIcon" translatesAutoresizingMaskIntoConstraints="NO" id="s79-VI-LMe">
+                                <rect key="frame" x="274" y="0.0" width="140" height="129"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="kgv-9P-Qjk"/>
+                                    <constraint firstAttribute="height" constant="129" id="qjf-sw-PZl"/>
+                                </constraints>
+                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyF-IW-hDp">
                                 <rect key="frame" x="0.0" y="48" width="414" height="814"/>
                                 <subviews>
@@ -55,19 +62,19 @@ Sadece birkaç dokunuşla afet yardımı çabalarına bağışta bulunabilir ve 
                                                     <constraint firstAttribute="height" constant="300" placeholder="YES" id="gwP-a5-Wit"/>
                                                 </constraints>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdG-RZ-AOK">
-                                                <rect key="frame" x="289" y="22" width="98" height="38"/>
+                                            <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KdG-RZ-AOK">
+                                                <rect key="frame" x="290" y="22" width="97" height="38"/>
                                                 <color key="tintColor" name="baseTextColor"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="closeButton" imagePlacement="trailing" title="Kapat  ">
-                                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="closeButton" title="Kapat  ">
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="dismiss:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="TkM-Nm-7bD"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" name="baseBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="gLw-qP-hUR" firstAttribute="top" secondItem="ahG-ok-naf" secondAttribute="bottom" constant="26" id="0E8-qj-CbQ"/>
                                             <constraint firstAttribute="bottom" secondItem="jm0-Qs-hFD" secondAttribute="bottom" id="GHr-18-YJW"/>
@@ -88,6 +95,7 @@ Sadece birkaç dokunuşla afet yardımı çabalarına bağışta bulunabilir ve 
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="epd-3g-GmQ" firstAttribute="leading" secondItem="ZDe-Y6-YXd" secondAttribute="leading" id="CRk-q8-fTx"/>
                                     <constraint firstItem="epd-3g-GmQ" firstAttribute="width" secondItem="C5F-3I-oly" secondAttribute="width" id="lHI-ae-bCO"/>
@@ -98,13 +106,33 @@ Sadece birkaç dokunuşla afet yardımı çabalarına bağışta bulunabilir ve 
                                 <viewLayoutGuide key="contentLayoutGuide" id="ZDe-Y6-YXd"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="C5F-3I-oly"/>
                             </scrollView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="singleHeart" translatesAutoresizingMaskIntoConstraints="NO" id="yIN-Bm-1ki">
+                                <rect key="frame" x="382" y="784" width="20" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="MfW-Z2-a5c"/>
+                                    <constraint firstAttribute="width" constant="20" id="Z51-VG-0ec"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leftCornerIcon" translatesAutoresizingMaskIntoConstraints="NO" id="5JB-wJ-0Bw">
+                                <rect key="frame" x="0.0" y="768" width="140" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="1oW-v9-Ppz"/>
+                                    <constraint firstAttribute="height" constant="128" id="flN-vp-0rS"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="baseBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="5JB-wJ-0Bw" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="85d-Vo-B8D"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="yIN-Bm-1ki" secondAttribute="bottom" constant="60" id="9cy-hJ-GB7"/>
+                            <constraint firstItem="s79-VI-LMe" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="M9o-rv-SiU"/>
                             <constraint firstItem="SyF-IW-hDp" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="Myz-8M-sZf"/>
                             <constraint firstItem="SyF-IW-hDp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="c0A-cQ-yK1"/>
                             <constraint firstItem="SyF-IW-hDp" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="jIz-D7-zR3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yIN-Bm-1ki" secondAttribute="trailing" constant="12" id="m3K-7x-Gdh"/>
+                            <constraint firstAttribute="bottom" secondItem="5JB-wJ-0Bw" secondAttribute="bottom" id="sYd-Wi-nqB"/>
+                            <constraint firstItem="s79-VI-LMe" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="wdt-z1-aqJ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="SyF-IW-hDp" secondAttribute="bottom" id="xkh-rm-aSn"/>
                         </constraints>
                     </view>
@@ -115,7 +143,10 @@ Sadece birkaç dokunuşla afet yardımı çabalarına bağışta bulunabilir ve 
                         <outlet property="alertTitleLabel" destination="ahG-ok-naf" id="Beo-vL-tyj"/>
                         <outlet property="buttonsStackView" destination="jm0-Qs-hFD" id="P57-Ar-ksN"/>
                         <outlet property="contentView" destination="5EZ-qb-Rvc" id="yX1-oa-6Uw"/>
+                        <outlet property="leftCornerIcon" destination="5JB-wJ-0Bw" id="Nme-aZ-psM"/>
+                        <outlet property="rightCornerIcon" destination="s79-VI-LMe" id="BFx-Ao-gxD"/>
                         <outlet property="scrollView" destination="SyF-IW-hDp" id="Bk7-TI-zT8"/>
+                        <outlet property="singleHeart" destination="yIN-Bm-1ki" id="dcd-Sd-DKM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -125,6 +156,9 @@ Sadece birkaç dokunuşla afet yardımı çabalarına bağışta bulunabilir ve 
     </scenes>
     <resources>
         <image name="closeButton" width="24.5" height="24"/>
+        <image name="leftCornerIcon" width="127.5" height="119.5"/>
+        <image name="rightCornerIcon" width="127" height="119.5"/>
+        <image name="singleHeart" width="20.5" height="18.5"/>
         <namedColor name="baseBackgroundColor">
             <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

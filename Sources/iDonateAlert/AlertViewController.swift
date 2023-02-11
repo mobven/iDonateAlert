@@ -18,7 +18,10 @@ final class AlertViewController: UIViewController {
     @IBOutlet private var alertTitleLabel: UILabel!
     @IBOutlet private var alertMessageLabel: UILabel!
     @IBOutlet private var buttonsStackView: UIStackView!
-
+    @IBOutlet weak var rightCornerIcon: UIImageView!
+    @IBOutlet weak var leftCornerIcon: UIImageView!
+    @IBOutlet weak var singleHeart: UIImageView!
+    
     var alertIcon: UIImage?
     var alertTitle: String!
     var titleFont: UIFont?
@@ -83,5 +86,23 @@ final class AlertViewController: UIViewController {
         let safariViewController = SFSafariViewController(url: alertButtons[button.tag].url, configuration: config)
         safariViewController.modalPresentationStyle = .fullScreen
         present(safariViewController, animated: true)
+    }
+    
+    override public func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+
+        if #available(iOS 13.0, *) {
+            guard traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) else {
+                return
+            }
+            if traitCollection.userInterfaceStyle == .light {
+                leftCornerIcon.isHidden = false
+                rightCornerIcon.isHidden = false
+            } else {
+                leftCornerIcon.isHidden = true
+                rightCornerIcon.isHidden = true
+            }
+
+        }
     }
 }
