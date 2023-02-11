@@ -52,8 +52,13 @@ By default it has, AHBAP, AFAD and Turk Kizilayi buttons. If you want to add cus
 ```swift
 let alert = iDonateAlert()
 alert.removeAllActions()
-// TODO: add URLS
-alert.addAction(.init(title: "INDIVIDUAL DONATION", image: nil))
+alert.addAction(
+    .init(
+        title: "INDIVIDUAL DONATION", image: nil,
+        borderColor: UIColor.systemPink, backgroundColor: UIColor.white,
+        url: URL(string: "https://www.afad.gov.tr/depremkampanyasi2")!
+    )
+)
 alert.present(over: self)
 ```
 
