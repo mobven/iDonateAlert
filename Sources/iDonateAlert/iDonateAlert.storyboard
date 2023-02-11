@@ -146,6 +146,7 @@ Sadece birkaç dokunuşla afet yardımı çabalarına bağışta bulunabilir ve 
                         <outlet property="alertTitleLabel" destination="ahG-ok-naf" id="Beo-vL-tyj"/>
                         <outlet property="buttonsStackView" destination="jm0-Qs-hFD" id="P57-Ar-ksN"/>
                         <outlet property="contentView" destination="5EZ-qb-Rvc" id="yX1-oa-6Uw"/>
+                        <outlet property="dismissButton" destination="KdG-RZ-AOK" id="eyL-gj-rNJ"/>
                         <outlet property="leftCornerIcon" destination="5JB-wJ-0Bw" id="Nme-aZ-psM"/>
                         <outlet property="rightCornerIcon" destination="s79-VI-LMe" id="BFx-Ao-gxD"/>
                         <outlet property="scrollView" destination="SyF-IW-hDp" id="Bk7-TI-zT8"/>

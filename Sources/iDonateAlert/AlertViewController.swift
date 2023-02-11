@@ -21,6 +21,7 @@ final class AlertViewController: UIViewController {
     @IBOutlet weak var rightCornerIcon: UIImageView!
     @IBOutlet weak var leftCornerIcon: UIImageView!
     @IBOutlet weak var singleHeart: UIImageView!
+    @IBOutlet weak var dismissButton: UIButton!
     
     var alertIcon: UIImage?
     var alertTitle: String!
@@ -51,6 +52,7 @@ final class AlertViewController: UIViewController {
             alertMessageLabel.attributedText = attributedMessage
         }
         setButtons()
+        dismissButton.localizedTitleKey = "close"
     }
     
     @IBAction func dismiss(_ sender: UIButton) {
