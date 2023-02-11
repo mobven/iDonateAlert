@@ -23,7 +23,10 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/11058743?v=4",
       "profile": "https://github.com/Rashidium",
       "contributions": [
-        "code"
+        "code",
+        "doc",
+        "infra",
+        "mentoring"
       ]
     }
   ],
