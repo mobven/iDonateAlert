@@ -1,0 +1,27 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "NOTB4D",
+      "name": "Eser Kucuker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75912206?v=4",
+      "profile": "https://github.com/NOTB4D",
+      "contributions": [
+        "infra",
+        "test",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "iDonateAlert",
+  "projectOwner": "mobven"
+}
