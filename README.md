@@ -68,7 +68,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/NOTB4D"><img src="https://avatars.githubusercontent.com/u/75912206?v=4?s=100" width="100px;" alt="Eser Kucuker"/><br /><sub><b>Eser Kucuker</b></sub></a><br /><a href="#infra-NOTB4D" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/mobven/iDonateAlert/commits?author=NOTB4D" title="Tests">⚠️</a> <a href="https://github.com/mobven/iDonateAlert/commits?author=NOTB4D" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Rashidium"><img src="https://avatars.githubusercontent.com/u/11058743?v=4?s=100" width="100px;" alt="Rashid Ramazanov"/><br /><sub><b>Rashid Ramazanov</b></sub></a><br /><a href="https://github.com/mobven/iDonateAlert/commits?author=Rashidium" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Rashidium"><img src="https://avatars.githubusercontent.com/u/11058743?v=4?s=100" width="100px;" alt="Rashid Ramazanov"/><br /><sub><b>Rashid Ramazanov</b></sub></a><br /><a href="https://github.com/mobven/iDonateAlert/commits?author=Rashidium" title="Code">💻</a> <a href="https://github.com/mobven/iDonateAlert/commits?author=Rashidium" title="Documentation">📖</a> <a href="#infra-Rashidium" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#mentoring-Rashidium" title="Mentoring">🧑‍🏫</a></td>
     </tr>
   </tbody>
 </table>
