@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "TÜRK KIZILAY.png",
+      "filename" : "kizilay light.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
@@ -12,12 +12,12 @@
           "value" : "dark"
         }
       ],
-      "filename" : "TÜRK KIZILAY 1.png",
+      "filename" : "kizilay.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "TÜRK KIZILAY@2x.png",
+      "filename" : "kizilay light@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
@@ -28,12 +28,12 @@
           "value" : "dark"
         }
       ],
-      "filename" : "TÜRK KIZILAY@2x 1.png",
+      "filename" : "kizilay@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "TÜRK KIZILAY@3x.png",
+      "filename" : "kizilay light@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     },
@@ -44,7 +44,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "TÜRK KIZILAY@3x 1.png",
+      "filename" : "kizilay@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
