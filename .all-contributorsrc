@@ -1,0 +1,56 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "Rashidium",
+      "name": "Rashid Ramazanov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11058743?v=4",
+      "profile": "https://github.com/Rashidium",
+      "contributions": [
+        "code",
+        "doc",
+        "infra",
+        "mentoring"
+      ]
+    },
+    {
+      "login": "NOTB4D",
+      "name": "Eser Kucuker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/75912206?v=4",
+      "profile": "https://github.com/NOTB4D",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "Pessevmeyen",
+      "name": "Furkan Erucar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/97690923?v=4",
+      "profile": "https://github.com/Pessevmeyen",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "MobvenSametOgutcuoglu",
+      "name": "Samet Ögütcüoğlu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/108695720?v=4",
+      "profile": "https://github.com/MobvenSametOgutcuoglu",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "iDonateAlert",
+  "projectOwner": "mobven"
+}
