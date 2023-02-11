@@ -169,6 +169,6 @@ public extension iDonateAlert.Button {
     }
     
     static var kizilay: Self {
-        .init(title: nil, image: UIImage(named: "turkkizilayi", in: .module), borderColor: .kızılayRed, backgroundColor: .kızılayBackgroundColor, url: URL(string: "https://www.kizilay.org.tr/bagis")!)
+        .init(title: nil, image: UIImage(named: "kizilay", in: .module), borderColor: .kızılayRed, backgroundColor: .kızılayBackgroundColor, url: URL(string: "https://www.kizilay.org.tr/bagis")!)
     }
 }
