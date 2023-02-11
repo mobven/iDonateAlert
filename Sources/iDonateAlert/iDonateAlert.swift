@@ -125,14 +125,14 @@ public final class iDonateAlert {
         let range = (defaultMessage as NSString).range(of: "change_color_title".localized)
 
         mutableAttributedString.addAttributes(
-            [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 24)],
+            [NSAttributedString.Key.font: UIFont.regular(24)],
             range: NSRange(location: 0, length: mutableAttributedString.string.count)
         )
         
         mutableAttributedString.addAttributes(
             [
                 NSAttributedString.Key.foregroundColor: UIColor.baseDonateTextColor,
-                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 24, weight: .bold)
+                NSAttributedString.Key.font: UIFont.bold(24)
             ],
             range: range
         )
@@ -144,14 +144,14 @@ public final class iDonateAlert {
         let defaultMessage = "alert_default_mesaage".localized
         let mutableAttributedString = NSMutableAttributedString(
             string: defaultMessage, attributes: [
-                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13)
+                NSAttributedString.Key.font: UIFont.regular(13)
             ]
         )
         let range = (defaultMessage as NSString).range(of: "default_message_bold".localized)
 
         mutableAttributedString.addAttribute(
             NSAttributedString.Key.font,
-            value: UIFont.systemFont(ofSize: 13, weight: .bold),
+            value: UIFont.bold(13),
             range: range
         )
 
