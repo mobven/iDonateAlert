@@ -28,6 +28,14 @@ class MainViewController: UIViewController {
     
     @IBAction func presentCustomTitle() {
         let alert = iDonateAlert(title: "Donate", message: "Donation lorem impsum...")
+        alert.removeAllActions()
+        alert.addAction(
+            .init(
+                title: "INDIVIDUAL DONATION", image: nil,
+                borderColor: UIColor.systemPink, backgroundColor: UIColor.white,
+                url: URL(string: "https://www.afad.gov.tr/depremkampanyasi2")!
+            )
+        )
         alert.present(over: self)
     }
     
