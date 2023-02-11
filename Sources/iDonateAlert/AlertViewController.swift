@@ -36,6 +36,7 @@ final class AlertViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUIForTraitCollection()
         alertIconHeightConstraint.constant = alertIcon == nil ? 0 : imageContainerHeight
         alertIconImage.image = alertIcon
         alertTitleLabel.text = alertTitle
@@ -50,10 +51,6 @@ final class AlertViewController: UIViewController {
             alertMessageLabel.attributedText = attributedMessage
         }
         setButtons()
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
     }
     
     @IBAction func dismiss(_ sender: UIButton) {
@@ -90,7 +87,10 @@ final class AlertViewController: UIViewController {
     
     override public func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-
+        updateUIForTraitCollection()
+    }
+    
+    private func updateUIForTraitCollection(_ previousTraitCollection: UITraitCollection? = nil) {
         if #available(iOS 13.0, *) {
             guard traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) else {
                 return
