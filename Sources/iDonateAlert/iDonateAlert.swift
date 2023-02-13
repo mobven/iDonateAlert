@@ -54,16 +54,19 @@ public final class iDonateAlert {
     var attributedMessage: NSAttributedString?
     
     /// - Parameters:
+    ///   - locale: Locale of the alert.
     ///   - icon: The Icon that is desired to appear on the screen. If no icon is entered initially, a custom icon will appear.
     ///   - title: It is the title that appears on the homepage. It cannot be nil.
     ///   - message: The message to be displayed on the screen is defined here.
     ///   - titleFont: To set the font. If it is nil, system font will be used.
     public init(
+        locale: iDonateAlertLocale = .tr,
         icon: UIImage? = nil,
         title: String,
         message: String,
         titleFont: UIFont? = nil
     ) {
+        Localizer.current.locale = locale.locale
         self.icon = icon ?? UIImage(named: "heart", in: .module)
         self.title = title
         self.message = message
@@ -73,14 +76,17 @@ public final class iDonateAlert {
     
     /// With this initializer, only icon and text can be inited
     /// - Parameters:
+    ///   - locale: Locale of the alert.
     ///   - icon: The Icon that is desired to appear on the screen is defined. If no icon is entered initially, a custom icon will appear.
     ///   - attributedTitle: to add attribution to the title that appears on the screen
     ///   - attributedMessage: to add attributes to the message that appears on the screen
     public init(
+        locale: iDonateAlertLocale = .tr,
         icon: UIImage? = nil,
         attributedTitle: NSAttributedString? = nil,
         attributedMessage: NSAttributedString? = nil
     ) {
+        Localizer.current.locale = locale.locale
         self.icon = icon ?? UIImage(named: "heart", in: .module)
         self.attributedTitle = attributedTitle ?? defaultAttributedTitle()
         self.attributedMessage = attributedMessage ?? defaultAttributedMessage()

@@ -8,14 +8,22 @@
 
 import Foundation
 
-public extension Locale {
+extension Locale {
     /// Turkish, tr_TR.
-    static var turkish = Locale(identifier: "tr_TR")
+    static var tr = Locale(identifier: "tr_TR")
     /// English, en_US.
-    static var english = Locale(identifier: "en_US")
+    static var en = Locale(identifier: "en_US")
+}
 
-    /// Language code for Turkish, tr-TR
-    static var turkishLanguageCode: String = "tr-TR"
+public enum iDonateAlertLocale {
+    case tr, en
+    
+    public var locale: Locale {
+        switch self {
+        case .tr: return Locale.en
+        case .en: return Locale.tr
+        }
+    }
 }
 
 extension Locale {

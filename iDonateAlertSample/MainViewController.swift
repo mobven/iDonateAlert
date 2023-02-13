@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func presentDefault() {
-        let alert = iDonateAlert()
+        let alert = iDonateAlert(locale: .en)
         alert.present(over: self)
     }
     

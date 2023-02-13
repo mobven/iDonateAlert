@@ -12,41 +12,25 @@ import Foundation
 final class Localizer {
     /// Current Localizer instance.
     static let current = Localizer()
-
-    /// Selected language code
-    var languageCode: String {
+    
+    var locale: Locale
+    
+    init() {
         if #available(iOS 13.0, *) {
-            return String(Bundle.main.preferredLocalizations.first?.prefix(2) ?? "")
+            locale = Locale.current
         } else {
-            return getLanguage()
+            locale = Localizer.getLanguage() == "en" ? .en : .tr
         }
     }
 
-    var locale: Locale {
-        if #available(iOS 13.0, *) {
-            return Locale.current
-        } else {
-            return getLanguage() == "en" ? .english : .turkish
-        }
-    }
-
-    fileprivate func getLanguage() -> String {
+    static func getLanguage() -> String {
         if let currentLanguage = UserDefaults.standard.object(forKey: "CurrentLanguageKey") as? String {
             return currentLanguage
         }
         return defaultLanguage()
     }
 
-    func setLocale(_ locale: Locale) {
-        let languageCode = locale.code()
-        let selectedLanguage = availableLanguages().contains(languageCode) ? languageCode : defaultLanguage()
-        if selectedLanguage != getLanguage() {
-            UserDefaults.standard.set(selectedLanguage, forKey: "CurrentLanguageKey")
-            UserDefaults.standard.synchronize()
-        }
-    }
-
-    func availableLanguages() -> [String] {
+    static func availableLanguages() -> [String] {
         var availableLanguages = Bundle.main.localizations
         // Removing "Base" from array
         if let indexOfBase = availableLanguages.firstIndex(of: "Base") {
@@ -55,12 +39,12 @@ final class Localizer {
         return availableLanguages
     }
 
-    private func defaultLanguage() -> String {
+    private static func defaultLanguage() -> String {
         var defaultLanguage = String()
         guard let preferredLanguage = Bundle.main.preferredLocalizations.first else {
             return "tr"
         }
-        let availableLanguages: [String] = availableLanguages()
+        let availableLanguages: [String] = Localizer.availableLanguages()
         if availableLanguages.contains(preferredLanguage) {
             defaultLanguage = preferredLanguage
         } else {
@@ -74,17 +58,13 @@ final class Localizer {
 extension String {
     /// Returns localized text with the current locale.
     var localized: String {
-        if #available(iOS 13.0, *) {
-            return NSLocalizedString(self, tableName: nil, bundle: Bundle.module, value: "", comment: "")
-        } else {
-            let bundle = Bundle.module
-            if let path = bundle.path(forResource: Localizer.current.getLanguage(), ofType: "lproj"),
-               let bundle = Bundle(path: path) {
-                return bundle.localizedString(forKey: self, value: nil, table: nil)
-            } else if let path = bundle.path(forResource: "Base", ofType: "lproj"),
-                      let bundle = Bundle(path: path) {
-                return bundle.localizedString(forKey: self, value: nil, table: nil)
-            }
+        let bundle = Bundle.module
+        if let path = bundle.path(forResource: Localizer.current.locale.code(), ofType: "lproj"),
+           let bundle = Bundle(path: path) {
+            return bundle.localizedString(forKey: self, value: nil, table: nil)
+        } else if let path = bundle.path(forResource: "Base", ofType: "lproj"),
+                  let bundle = Bundle(path: path) {
+            return bundle.localizedString(forKey: self, value: nil, table: nil)
         }
         return self
     }

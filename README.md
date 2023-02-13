@@ -62,6 +62,13 @@ alert.addAction(
 alert.present(over: self)
 ```
 
+### Localization
+You can pass `iDonateAlertLocale` value to it's initializer to set locale.
+```swift
+let alert = iDonateAlert(locale: .en)
+```
+Currently, English and Turkish languages are supported. Please feel free to contribute to add other languages.
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji meanings](https://allcontributors.org/docs/en/emoji-key)):
