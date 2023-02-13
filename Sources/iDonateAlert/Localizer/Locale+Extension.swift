@@ -20,8 +20,8 @@ public enum iDonateAlertLocale {
     
     public var locale: Locale {
         switch self {
-        case .tr: return Locale.en
-        case .en: return Locale.tr
+        case .tr: return Locale.tr
+        case .en: return Locale.en
         }
     }
 }
